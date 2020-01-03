@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Database Creation</title>
+	<script type="text/javascript">
+	function blockSpecialChar(e){
+        var k;
+        document.all ? k = e.keyCode : k = e.which;
+        return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+        }
+	</script>
+</head>
+<body>
+<center><h1> Just Enter the Name of the Database</h1>
+<form method="POST" action="createDB.php">
+<input type="text" name="DatabaseName" id="DatabaseName" onkeypress="return blockSpecialChar(event)" required>
+<input type="submit">
+</center>
+</form>
+</body>
+</html>
